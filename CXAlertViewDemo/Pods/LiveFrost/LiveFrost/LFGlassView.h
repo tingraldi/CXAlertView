@@ -5,6 +5,5 @@
 
 @property (nonatomic, assign) CGFloat blurRadius;
 @property (nonatomic, assign) CGFloat scaleFactor;
-@property (nonatomic, strong) UIView *blurSuperView;
 
 @end

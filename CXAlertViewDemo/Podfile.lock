@@ -1,0 +1,14 @@
+PODS:
+  - LiveFrost (1.0.2)
+
+DEPENDENCIES:
+  - LiveFrost (from `https://github.com/radi/LiveFrost.git`)
+
+EXTERNAL SOURCES:
+  LiveFrost:
+    :git: https://github.com/radi/LiveFrost.git
+
+SPEC CHECKSUMS:
+  LiveFrost: f3dc4712aaff53c7449d75a196c2c3036e2b6cbd
+
+COCOAPODS: 0.25.0

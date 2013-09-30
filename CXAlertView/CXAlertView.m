@@ -809,7 +809,6 @@ static CXAlertView *__cx_alert_current_view;
             self.blurView.layer.cornerRadius = self.cornerRadius;
             self.blurView.blurRadius = 10.;
             self.blurView.scaleFactor = 1.;
-            self.blurView.blurSuperView = self.oldKeyWindow.rootViewController.view;
         }
         
         [self insertSubview:self.blurView belowSubview:self.containerView];

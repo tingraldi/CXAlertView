@@ -42,7 +42,7 @@
 	self.clipsToBounds = YES;
 	self.layer.cornerRadius = 20.0f;
 	self.blurRadius = 4.0f;
-	self.scaleFactor = 1.f;
+	self.scaleFactor = 0.25f;
 	self.backgroundColor = [UIColor colorWithWhite:1.0f alpha:0.25f];
 	self.opaque = NO;
 	self.userInteractionEnabled = NO;
@@ -179,11 +179,7 @@
 }
 
 - (void) refresh {
-    if (!self.blurSuperView) {
-        self.blurSuperView = self.superview;
-    }
-    
-	if (!self.blurSuperView) {
+	if (!self.superview) {
 		return;
 	}
 	
@@ -195,7 +191,7 @@
 	vImage_Buffer effectOutBuffer = _effectOutBuffer;
 	
 	self.hidden = YES;
-	[self.blurSuperView.layer renderInContext:effectInContext];
+	[self.superview.layer renderInContext:effectInContext];
 	self.hidden = NO;
 	
 	uint32_t blurKernel = _precalculatedBlurKernel;

@@ -26,13 +26,13 @@
 		83B3A84417E9B18D001BCBC6 /* CXAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B3A84317E9B18D001BCBC6 /* CXAlertViewController.m */; };
 		83B3A84717E9B19E001BCBC6 /* CXAlertBackgroundWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B3A84617E9B19E001BCBC6 /* CXAlertBackgroundWindow.m */; };
 		83B3A84A17E9B1A7001BCBC6 /* CXAlertButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B3A84917E9B1A7001BCBC6 /* CXAlertButtonItem.m */; };
-		83E10DD217F5398C00BC5D18 /* LFDisplayBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E10DCE17F5398C00BC5D18 /* LFDisplayBridge.m */; };
-		83E10DD317F5398C00BC5D18 /* LFGlassView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E10DD017F5398C00BC5D18 /* LFGlassView.m */; };
 		83E10DD517F53A5500BC5D18 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E10DD417F53A5500BC5D18 /* Accelerate.framework */; };
 		83E10DD717F549F400BC5D18 /* bkg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83E10DD617F549F400BC5D18 /* bkg2.jpg */; };
+		F7AD99A434A14455ADF8EC00 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE988077BF2145E69E2CB863 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E9C2EF6952945D9ACF5D006 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		835710E017E18FDF004C8155 /* CXAlertViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CXAlertViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		835710E317E18FDF004C8155 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		835710E517E18FDF004C8155 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -62,13 +62,9 @@
 		83B3A84617E9B19E001BCBC6 /* CXAlertBackgroundWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAlertBackgroundWindow.m; sourceTree = "<group>"; };
 		83B3A84817E9B1A7001BCBC6 /* CXAlertButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAlertButtonItem.h; sourceTree = "<group>"; };
 		83B3A84917E9B1A7001BCBC6 /* CXAlertButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAlertButtonItem.m; sourceTree = "<group>"; };
-		83E10DCD17F5398C00BC5D18 /* LFDisplayBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFDisplayBridge.h; sourceTree = "<group>"; };
-		83E10DCE17F5398C00BC5D18 /* LFDisplayBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFDisplayBridge.m; sourceTree = "<group>"; };
-		83E10DCF17F5398C00BC5D18 /* LFGlassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFGlassView.h; sourceTree = "<group>"; };
-		83E10DD017F5398C00BC5D18 /* LFGlassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFGlassView.m; sourceTree = "<group>"; };
-		83E10DD117F5398C00BC5D18 /* LiveFrost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveFrost.h; sourceTree = "<group>"; };
 		83E10DD417F53A5500BC5D18 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		83E10DD617F549F400BC5D18 /* bkg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bkg2.jpg; sourceTree = "<group>"; };
+		FE988077BF2145E69E2CB863 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +77,7 @@
 				835710E417E18FDF004C8155 /* UIKit.framework in Frameworks */,
 				835710E617E18FDF004C8155 /* Foundation.framework in Frameworks */,
 				835710E817E18FDF004C8155 /* CoreGraphics.framework in Frameworks */,
+				F7AD99A434A14455ADF8EC00 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +90,7 @@
 				835710E917E18FDF004C8155 /* CXAlertViewDemo */,
 				835710E217E18FDF004C8155 /* Frameworks */,
 				835710E117E18FDF004C8155 /* Products */,
+				2E9C2EF6952945D9ACF5D006 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +110,7 @@
 				835710E317E18FDF004C8155 /* UIKit.framework */,
 				835710E517E18FDF004C8155 /* Foundation.framework */,
 				835710E717E18FDF004C8155 /* CoreGraphics.framework */,
+				FE988077BF2145E69E2CB863 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -150,7 +149,6 @@
 		8357110617E18FFD004C8155 /* CXAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				83E10DCC17F5398C00BC5D18 /* LiveFrost */,
 				83B3A84517E9B19E001BCBC6 /* CXAlertBackgroundWindow.h */,
 				83B3A84617E9B19E001BCBC6 /* CXAlertBackgroundWindow.m */,
 				83B3A84817E9B1A7001BCBC6 /* CXAlertButtonItem.h */,
@@ -166,18 +164,6 @@
 			path = ../../CXAlertView;
 			sourceTree = "<group>";
 		};
-		83E10DCC17F5398C00BC5D18 /* LiveFrost */ = {
-			isa = PBXGroup;
-			children = (
-				83E10DCD17F5398C00BC5D18 /* LFDisplayBridge.h */,
-				83E10DCE17F5398C00BC5D18 /* LFDisplayBridge.m */,
-				83E10DCF17F5398C00BC5D18 /* LFGlassView.h */,
-				83E10DD017F5398C00BC5D18 /* LFGlassView.m */,
-				83E10DD117F5398C00BC5D18 /* LiveFrost.h */,
-			);
-			path = LiveFrost;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -185,9 +171,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8357110317E18FDF004C8155 /* Build configuration list for PBXNativeTarget "CXAlertViewDemo" */;
 			buildPhases = (
+				9F5B2369AE75454CB4A5250F /* Check Pods Manifest.lock */,
 				835710DC17E18FDF004C8155 /* Sources */,
 				835710DD17E18FDF004C8155 /* Frameworks */,
 				835710DE17E18FDF004C8155 /* Resources */,
+				4339D397AAFA45F5B4728E7A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -243,6 +231,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4339D397AAFA45F5B4728E7A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F5B2369AE75454CB4A5250F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		835710DC17E18FDF004C8155 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -256,8 +277,6 @@
 				83B3A84717E9B19E001BCBC6 /* CXAlertBackgroundWindow.m in Sources */,
 				83B3A84A17E9B1A7001BCBC6 /* CXAlertButtonItem.m in Sources */,
 				83AB028817F2A551005E51C4 /* CXAlertButtonContainerView.m in Sources */,
-				83E10DD217F5398C00BC5D18 /* LFDisplayBridge.m in Sources */,
-				83E10DD317F5398C00BC5D18 /* LFGlassView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +360,7 @@
 		};
 		8357110417E18FDF004C8155 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E9C2EF6952945D9ACF5D006 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CXAlertViewDemo/CXAlertViewDemo-Prefix.pch";
@@ -353,6 +373,7 @@
 		};
 		8357110517E18FDF004C8155 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E9C2EF6952945D9ACF5D006 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CXAlertViewDemo/CXAlertViewDemo-Prefix.pch";
