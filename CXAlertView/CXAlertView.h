@@ -50,9 +50,9 @@ typedef void(^CXAlertViewHandler)(CXAlertView *alertView);
 @property (nonatomic, assign) BOOL showBlurBackground;
 
 // Create
-- (id)initWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle;
+- (id)initWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle cancelBlock:(CXAlertViewHandler)cancelHandler;
 
-- (id)initWithTitle:(NSString *)title contentView:(UIView *)contentView cancelButtonTitle:(NSString *)cancelButtonTitle;
+- (id)initWithTitle:(NSString *)title contentView:(UIView *)contentView cancelButtonTitle:(NSString *)cancelButtonTitle cancelBlock:(CXAlertViewHandler)cancelHandler;
 
 // Buttons
 - (void)addButtonWithTitle:(NSString *)title type:(CXAlertViewButtonType)type handler:(CXAlertButtonHandler)handler;

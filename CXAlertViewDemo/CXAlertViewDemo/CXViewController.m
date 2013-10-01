@@ -51,7 +51,8 @@
     [super viewDidAppear:animated];
     
     // Create alertView with the old fashioned way.
-    CXAlertView *alertView = [[CXAlertView alloc] initWithTitle:@"Steven Jobs" message:@"\"Steven Paul Jobs, the co-founder, two-time CEO, and chairman of Apple Inc., died October 5, 2011, after a long battle with cancer. He was 56. He was is survived by his wife and four children.The achievements in Jobs' career included helping to popularize the personal computer, leading the development of groundbreaking technology products including the Macintosh, iPod, and iPhone, and driving Pixar Animation Studios to prominence. Jobs’ charisma, drive for success and control, and vision contributed to revolutionary changes in the way technology integrates into and affects the daily life of most people in the world.\" - Wikipedia" cancelButtonTitle:nil];
+    CXAlertView *alertView = [[CXAlertView alloc] initWithTitle:@"Steven Jobs" message:@"\"Steven Paul Jobs, the co-founder, two-time CEO, and chairman of Apple Inc., died October 5, 2011, after a long battle with cancer. He was 56. He was is survived by his wife and four children.The achievements in Jobs' career included helping to popularize the personal computer, leading the development of groundbreaking technology products including the Macintosh, iPod, and iPhone, and driving Pixar Animation Studios to prominence. Jobs’ charisma, drive for success and control, and vision contributed to revolutionary changes in the way technology integrates into and affects the daily life of most people in the world.\" - Wikipedia" cancelButtonTitle:nil cancelBlock:^(CXAlertView *alertView) {
+    }];
     // Add additional button as you like with block to handle UIControlEventTouchUpInside event.
     [alertView addButtonWithTitle:@"Dismiss"
                              type:CXAlertViewButtonTypeCancel
@@ -93,16 +94,16 @@
 
 - (IBAction)showSquenceAlertView:(id)sender
 {
-    // This is a demo for poping up two alertview.
+    // This is a demo for popping up two alertview.
     
     // Ｔhe old fashioned way to show alertview.
-    CXAlertView *alertViewMe = [[CXAlertView alloc] initWithTitle:@"Chris Xu" contentView:self.myInfoView cancelButtonTitle:@"Sure"];
+    CXAlertView *alertViewMe = [[CXAlertView alloc] initWithTitle:@"Chris Xu" contentView:self.myInfoView cancelButtonTitle:@"Sure" cancelBlock:nil];
     alertViewMe.showButtonLine = NO;
     
     [alertViewMe show];
     
     
-    CXAlertView *alertView = [[CXAlertView alloc] initWithTitle:@"MIT License" message:@"Copyright (c) 2013 Chris Xu, Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php) \n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the ‘Software’), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE." cancelButtonTitle:nil];
+    CXAlertView *alertView = [[CXAlertView alloc] initWithTitle:@"MIT License" message:@"Copyright (c) 2013 Chris Xu, Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php) \n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the ‘Software’), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE." cancelButtonTitle:nil cancelBlock:nil];
     
     alertView.willShowHandler = ^(CXAlertView *alertView) {
         NSLog(@"%@, willShowHandler", alertView);
@@ -135,7 +136,7 @@
 
 - (IBAction)showBlurAlert:(id)sender
 {
-    CXAlertView *alertView = [[CXAlertView alloc] initWithTitle:@"Blur Background Trigger \n Test" message:nil cancelButtonTitle:@"Dismiss"];
+    CXAlertView *alertView = [[CXAlertView alloc] initWithTitle:@"Blur Background Trigger \n Test" message:nil cancelButtonTitle:@"Dismiss" cancelBlock:nil];
     
     [alertView addButtonWithTitle:@"Disable"
                              type:CXAlertViewButtonTypeCustom
@@ -154,14 +155,14 @@
 
 - (IBAction)showCXAlert:(id)sender
 {
-    CXAlertView *alertViewMe = [[CXAlertView alloc] initWithTitle:@"Chris Xu" message:@"Something about me...." cancelButtonTitle:@"OK"];
+    CXAlertView *alertViewMe = [[CXAlertView alloc] initWithTitle:@"Chris Xu" message:@"Something about me...." cancelButtonTitle:@"OK" cancelBlock:nil];
     
     [alertViewMe show];
 }
 
 - (IBAction)showSystemAlert:(id)sender
 {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Chris Xu" message:@"Something about me...." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Chris Xu" message:@"Something about me...." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     
     [alertView show];
 }

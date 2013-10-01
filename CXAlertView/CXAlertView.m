@@ -158,7 +158,7 @@ static CXAlertView *__cx_alert_current_view;
 }
 #pragma mark - CXAlertView PB
 // Create
-- (id)initWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle {
+- (id)initWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle cancelBlock:(CXAlertViewHandler)cancelHandler {
     _vericalPadding = kDefaultVericalPadding;
     _containerWidth = kDefaultContainerWidth;
 
@@ -172,10 +172,10 @@ static CXAlertView *__cx_alert_current_view;
     messageLabel.text = message;
     messageLabel.frame = CGRectMake(self.vericalPadding, 0, self.containerWidth - self.vericalPadding * 2, [self heightWithText:message font:messageLabel.font]);
 
-    return [self initWithTitle:title contentView:messageLabel cancelButtonTitle:cancelButtonTitle];
+    return [self initWithTitle:title contentView:messageLabel cancelButtonTitle:cancelButtonTitle cancelBlock:cancelHandler];
 }
 
-- (id)initWithTitle:(NSString *)title contentView:(UIView *)contentView cancelButtonTitle:(NSString *)cancelButtonTitle {
+- (id)initWithTitle:(NSString *)title contentView:(UIView *)contentView cancelButtonTitle:(NSString *)cancelButtonTitle cancelBlock:(CXAlertViewHandler)cancelHandler {
     self = [super init];
     if (self) {
         _buttons = [[NSMutableArray alloc] init];
@@ -194,10 +194,14 @@ static CXAlertView *__cx_alert_current_view;
 
         _showButtonLine = YES;
         _showBlurBackground = YES;
+
         [self setupScrollViews];
         if (cancelButtonTitle) {
             [self addButtonWithTitle:cancelButtonTitle type:CXAlertViewButtonTypeCancel handler:^(CXAlertView *alertView, CXAlertButtonItem *button) {
                 [alertView dismiss];
+                if (cancelHandler) {
+                    cancelHandler(alertView);
+                }
             }];
         }
     }
