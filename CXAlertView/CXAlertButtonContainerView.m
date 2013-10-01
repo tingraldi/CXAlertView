@@ -14,8 +14,7 @@
 
 @implementation CXAlertButtonContainerView
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
@@ -24,41 +23,37 @@
     return self;
 }
 
-- (id)init
-{
+- (id)init {
     self = [super init];
     if (self) {
         _buttons = [[NSMutableArray alloc] init];
     }
-    
+
     return self;
 }
 
-- (void)drawRect:(CGRect)rect
-{
+- (void)drawRect:(CGRect)rect {
     [super drawRect:rect];
-    
+
     if (_defaultTopLineVisible) {
         CGContextRef context = UIGraphicsGetCurrentContext();
         CGContextClearRect(context, self.bounds);
-        
+
         CGContextSetStrokeColorWithColor(context, [UIColor colorWithRed:0.671 green:0.675 blue:0.694 alpha:1.000].CGColor);
         CGContextSetLineWidth(context, 1.0);
-        CGContextMoveToPoint(context, 0,0);
+        CGContextMoveToPoint(context, 0, 0);
         CGContextAddLineToPoint(context, CGRectGetWidth(self.frame), 0);
         CGContextStrokePath(context);
     }
 }
 
-- (void)layoutSubviews
-{
+- (void)layoutSubviews {
     [super layoutSubviews];
 }
 
 #pragma mark - PB
-- (void)addButtonWithTitle:(NSString *)title type:(CXAlertViewButtonType)type handler:(CXAlertButtonHandler)handler
-{
-    
+- (void)addButtonWithTitle:(NSString *)title type:(CXAlertViewButtonType)type handler:(CXAlertButtonHandler)handler {
+
 }
 
 #pragma mark - PV

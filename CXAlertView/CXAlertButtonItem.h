@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+
 //#import "CXAlertView.h"
 typedef NS_ENUM(NSInteger, CXAlertViewButtonType) {
     CXAlertViewButtonTypeDefault = 0,
@@ -16,6 +17,7 @@ typedef NS_ENUM(NSInteger, CXAlertViewButtonType) {
 
 @class CXAlertView;
 @class CXAlertButtonItem;
+
 typedef void(^CXAlertButtonHandler)(CXAlertView *alertView, CXAlertButtonItem *button);
 
 @interface CXAlertButtonItem : UIButton

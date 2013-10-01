@@ -13,8 +13,7 @@ const UIWindowLevel UIWindowLevelCXAlertBackground = 1998.0;
 
 @implementation CXAlertBackgroundWindow
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -24,10 +23,9 @@ const UIWindowLevel UIWindowLevelCXAlertBackground = 1998.0;
     return self;
 }
 
-- (void)drawRect:(CGRect)rect
-{
+- (void)drawRect:(CGRect)rect {
     CGContextRef context = UIGraphicsGetCurrentContext();
-    
+
     [[UIColor colorWithWhite:0 alpha:0.5] set];
     CGContextFillRect(context, self.bounds);
 }
