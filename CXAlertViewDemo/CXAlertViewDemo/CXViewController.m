@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) IBOutlet UIView *myInfoView;
 
-- (IBAction)showSquenceAlertView:(id)sender;
+- (IBAction)showSequenceAlertView:(id)sender;
 
 - (IBAction)showBlurAlert:(id)sender;
 
@@ -51,8 +51,7 @@
     [super viewDidAppear:animated];
     
     // Create alertView with the old fashioned way.
-    CXAlertView *alertView = [[CXAlertView alloc] initWithTitle:@"Steven Jobs" message:@"\"Steven Paul Jobs, the co-founder, two-time CEO, and chairman of Apple Inc., died October 5, 2011, after a long battle with cancer. He was 56. He was is survived by his wife and four children.The achievements in Jobs' career included helping to popularize the personal computer, leading the development of groundbreaking technology products including the Macintosh, iPod, and iPhone, and driving Pixar Animation Studios to prominence. Jobs’ charisma, drive for success and control, and vision contributed to revolutionary changes in the way technology integrates into and affects the daily life of most people in the world.\" - Wikipedia" cancelButtonTitle:nil cancelBlock:^(CXAlertView *alertView) {
-    }];
+    CXAlertView *alertView = [[CXAlertView alloc] initWithTitle:@"Steven Jobs" message:@"\"Steven Paul Jobs, the co-founder, two-time CEO, and chairman of Apple Inc., died October 5, 2011, after a long battle with cancer. He was 56. He was is survived by his wife and four children.The achievements in Jobs' career included helping to popularize the personal computer, leading the development of groundbreaking technology products including the Macintosh, iPod, and iPhone, and driving Pixar Animation Studios to prominence. Jobs’ charisma, drive for success and control, and vision contributed to revolutionary changes in the way technology integrates into and affects the daily life of most people in the world.\" - Wikipedia" cancelButtonTitle:nil cancelBlock:nil];
     // Add additional button as you like with block to handle UIControlEventTouchUpInside event.
     [alertView addButtonWithTitle:@"Dismiss"
                              type:CXAlertViewButtonTypeCancel
@@ -92,7 +91,7 @@
     [alertView show];
 }
 
-- (IBAction)showSquenceAlertView:(id)sender
+- (IBAction)showSequenceAlertView:(id)sender
 {
     // This is a demo for popping up two alertview.
     

@@ -1,3 +1,3 @@
 platform :ios, '6.0'
-pod 'LiveFrost', :git => 'https://github.com/radi/LiveFrost.git'
+pod 'LiveFrost', :git => 'https://github.com/radi/LiveFrost.git', :tag => '1.0.1'
 
