@@ -168,7 +168,11 @@ static CXAlertView *__cx_alert_current_view;
     messageLabel.font = [UIFont systemFontOfSize:14.0];
     messageLabel.textColor = [UIColor blackColor];
     messageLabel.numberOfLines = 0;
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 60000
+    messageLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+#else
     messageLabel.lineBreakMode = UILineBreakModeTailTruncation;
+#endif
     messageLabel.text = message;
     messageLabel.frame = CGRectMake(self.vericalPadding, 0, self.containerWidth - self.vericalPadding * 2, [self heightWithText:message font:messageLabel.font]);
 
