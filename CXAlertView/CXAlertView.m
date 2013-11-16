@@ -168,14 +168,14 @@ static CXAlertView *__cx_alert_current_view;
     messageLabel.font = [UIFont systemFontOfSize:14.0];
     messageLabel.textColor = [UIColor blackColor];
     messageLabel.numberOfLines = 0;
-#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 60000
+    messageLabel.text = message;
+    messageLabel.frame = CGRectMake( self.vericalPadding, 0, self.containerWidth - self.vericalPadding*2, [self heightWithText:message font:messageLabel.font]);
+    
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_6_0
     messageLabel.lineBreakMode = NSLineBreakByTruncatingTail;
 #else
     messageLabel.lineBreakMode = UILineBreakModeTailTruncation;
 #endif
-    messageLabel.text = message;
-    messageLabel.frame = CGRectMake(self.vericalPadding, 0, self.containerWidth - self.vericalPadding * 2, [self heightWithText:message font:messageLabel.font]);
-
     return [self initWithTitle:title contentView:messageLabel cancelButtonTitle:cancelButtonTitle cancelBlock:cancelHandler];
 }
 
@@ -368,8 +368,15 @@ static CXAlertView *__cx_alert_current_view;
 
 - (CGFloat)heightWithText:(NSString *)text font:(UIFont *)font {
     if (text) {
-        CGSize size = [text sizeWithFont:font constrainedToSize:CGSizeMake(self.containerWidth - 2 * self.vericalPadding - 1, NSUIntegerMax)];
-
+        CGSize size = CGSizeZero;
+        CGSize rSize = CGSizeMake(self.containerWidth - 2*self.vericalPadding - 1, NSUIntegerMax);
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_7_0
+        NSDictionary* attributes = [NSDictionary dictionaryWithObjectsAndKeys: font, NSFontAttributeName, nil];
+        CGRect rect = [text boundingRectWithSize:rSize options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
+        size = rect.size;
+#else
+        size = [text sizeWithFont:font constrainedToSize:rSize];
+#endif
         return size.height;
     }
 
