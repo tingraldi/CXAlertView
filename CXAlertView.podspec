@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'CXAlertView'
-  s.version      = '1.0.1'
+  s.version      = '1.0.1.1'
   s.summary      = 'Custom alertView which allow you to add view as main content.'
   s.homepage     = 'https://github.com/rcdilorenzo/CXAlertView'
   s.license      = 'MIT'
