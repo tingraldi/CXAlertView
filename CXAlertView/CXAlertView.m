@@ -338,8 +338,15 @@ static CXAlertView *__cx_alert_current_view;
 }
 
 + (void)showBackground {
+    UIScreen *screen = [UIScreen mainScreen];
+    CGRect frame = screen.bounds;
+#if (defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000)
+    if ([screen respondsToSelector:@selector(nativeBounds)]) {
+        frame = screen.nativeBounds;
+    }
+#endif
     if (!__cx_alert_background_window) {
-        __cx_alert_background_window = [[CXAlertBackgroundWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        __cx_alert_background_window = [[CXAlertBackgroundWindow alloc] initWithFrame:frame];
 
         [__cx_alert_background_window makeKeyAndVisible];
         __cx_alert_background_window.alpha = 0;
